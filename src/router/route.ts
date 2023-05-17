@@ -908,21 +908,6 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 						},
 					},
 					{
-						path: '/make/noticeBar',
-						name: 'makeNoticeBar',
-						component: () => import('/@/views/make/noticeBar/index.vue'),
-						meta: {
-							title: 'message.router.makeNoticeBar',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'ele-Bell',
-						},
-					},
-					{
 						path: '/make/svgDemo',
 						name: 'makeSvgDemo',
 						component: () => import('/@/views/make/svgDemo/index.vue'),
@@ -1037,104 +1022,6 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				],
 			},
 			{
-				path: '/visualizing',
-				name: 'visualizingIndex',
-				component: () => import('/@/layout/routerView/parent.vue'),
-				redirect: '/visualizing/visualizingLinkDemo1',
-				meta: {
-					title: 'message.router.visualizingIndex',
-					isLink: '',
-					isHide: false,
-					isKeepAlive: true,
-					isAffix: false,
-					isIframe: false,
-					roles: ['admin'],
-					icon: 'ele-ChatLineRound',
-				},
-				/**
-				 * 打开内置全屏
-				 * component 都为 `() => import('/@/layout/routerView/link.vue')`
-				 * isLink 链接为内置的路由地址，地址为 staticRoutes 中定义
-				 */
-				children: [
-					{
-						path: '/visualizing/visualizingLinkDemo1',
-						name: 'visualizingLinkDemo1',
-						component: () => import('/@/layout/routerView/link.vue'),
-						meta: {
-							title: 'message.router.visualizingLinkDemo1',
-							isLink: '/visualizingDemo1',
-							isHide: false,
-							isKeepAlive: false,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin'],
-							icon: 'iconfont icon-caozuo-wailian',
-						},
-					},
-					{
-						path: '/visualizing/visualizingLinkDemo2',
-						name: 'visualizingLinkDemo2',
-						component: () => import('/@/layout/routerView/link.vue'),
-						meta: {
-							title: 'message.router.visualizingLinkDemo2',
-							isLink: '/visualizingDemo2',
-							isHide: false,
-							isKeepAlive: false,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin'],
-							icon: 'iconfont icon-caozuo-wailian',
-						},
-					},
-				],
-			},
-			{
-				path: '/chart',
-				name: 'chartIndex',
-				component: () => import('/@/views/chart/index.vue'),
-				meta: {
-					title: 'message.router.chartIndex',
-					isLink: '',
-					isHide: false,
-					isKeepAlive: true,
-					isAffix: false,
-					isIframe: false,
-					roles: ['admin', 'common'],
-					icon: 'iconfont icon-ico_shuju',
-				},
-			},
-			{
-				path: '/personal',
-				name: 'personal',
-				component: () => import('/@/views/personal/index.vue'),
-				meta: {
-					title: 'message.router.personal',
-					isLink: '',
-					isHide: false,
-					isKeepAlive: true,
-					isAffix: false,
-					isIframe: false,
-					roles: ['admin', 'common'],
-					icon: 'iconfont icon-gerenzhongxin',
-				},
-			},
-			{
-				path: '/tools',
-				name: 'tools',
-				component: () => import('/@/views/tools/index.vue'),
-				meta: {
-					title: 'message.router.tools',
-					isLink: '',
-					isHide: false,
-					isKeepAlive: true,
-					isAffix: false,
-					isIframe: false,
-					roles: ['admin', 'common'],
-					icon: 'iconfont icon-gongju',
-				},
-			},
-			{
 				path: '/link',
 				name: 'layoutLinkView',
 				component: () => import('/@/layout/routerView/link.vue'),
@@ -1227,20 +1114,4 @@ export const staticRoutes: Array<RouteRecordRaw> = [
 	 * 提示：写在这里的为全屏界面，不建议写在这里
 	 * 请写在 `dynamicRoutes` 路由数组中
 	 */
-	{
-		path: '/visualizingDemo1',
-		name: 'visualizingDemo1',
-		component: () => import('/@/views/visualizing/demo1.vue'),
-		meta: {
-			title: 'message.router.visualizingLinkDemo1',
-		},
-	},
-	{
-		path: '/visualizingDemo2',
-		name: 'visualizingDemo2',
-		component: () => import('/@/views/visualizing/demo2.vue'),
-		meta: {
-			title: 'message.router.visualizingLinkDemo2',
-		},
-	},
 ];
