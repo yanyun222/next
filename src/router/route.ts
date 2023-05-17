@@ -566,119 +566,7 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 					icon: 'iconfont icon-fuzhiyemian',
 				},
 				children: [
-					{
-						path: '/pages/filtering',
-						name: 'pagesFiltering',
-						component: () => import('/@/views/pages/filtering/index.vue'),
-						meta: {
-							title: 'message.router.pagesFiltering',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'ele-Sell',
-						},
-						/**
-						 * 注意此处详情写法：
-						 * 1、嵌套进父级里时，面包屑显示为：首页/页面/过滤筛选组件/过滤筛选组件详情
-						 * 2、不嵌套进父级时，面包屑显示为：首页/页面/过滤筛选组件/过滤筛选组件详情
-						 * 3、想要父级不高亮，面包屑显示为：首页/页面/过滤筛选组件详情，设置路径为：/pages/filteringDetails
-						 */
-						children: [
-							{
-								path: '/pages/filtering/details',
-								name: 'pagesFilteringDetails',
-								component: () => import('/@/views/pages/filtering/details.vue'),
-								meta: {
-									title: 'message.router.pagesFilteringDetails',
-									isLink: '',
-									isHide: true,
-									isKeepAlive: false,
-									isAffix: false,
-									isIframe: false,
-									roles: ['admin', 'common'],
-									icon: 'ele-Sunny',
-								},
-							},
-						],
-					},
-					{
-						path: '/pages/filtering/details1',
-						name: 'pagesFilteringDetails1',
-						component: () => import('/@/views/pages/filtering/details1.vue'),
-						meta: {
-							title: 'message.router.pagesFilteringDetails1',
-							isLink: '',
-							isHide: true,
-							isKeepAlive: false,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'ele-Sunny',
-						},
-					},
-					{
-						path: '/pages/iocnfont',
-						name: 'pagesIocnfont',
-						component: () => import('/@/views/pages/iocnfont/index.vue'),
-						meta: {
-							title: 'message.router.pagesIocnfont',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'ele-Present',
-						},
-					},
-					{
-						path: '/pages/element',
-						name: 'pagesElement',
-						component: () => import('/@/views/pages/element/index.vue'),
-						meta: {
-							title: 'message.router.pagesElement',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'ele-Eleme',
-						},
-					},
-					{
-						path: '/pages/awesome',
-						name: 'pagesAwesome',
-						component: () => import('/@/views/pages/awesome/index.vue'),
-						meta: {
-							title: 'message.router.pagesAwesome',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'ele-SetUp',
-						},
-					},
-					{
-						path: '/pages/formAdapt',
-						name: 'pagesFormAdapt',
-						component: () => import('/@/views/pages/formAdapt/index.vue'),
-						meta: {
-							title: 'message.router.pagesFormAdapt',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'iconfont icon-biaodan',
-						},
-					},
+					
 					{
 						path: '/pages/tableRules',
 						name: 'pagesTableRules',
@@ -892,21 +780,6 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 					icon: 'iconfont icon-siweidaotu',
 				},
 				children: [
-					{
-						path: '/make/selector',
-						name: 'makeSelector',
-						component: () => import('/@/views/make/selector/index.vue'),
-						meta: {
-							title: 'message.router.makeSelector',
-							isLink: '',
-							isHide: false,
-							isKeepAlive: true,
-							isAffix: false,
-							isIframe: false,
-							roles: ['admin', 'common'],
-							icon: 'iconfont icon-xuanzeqi',
-						},
-					},
 					{
 						path: '/make/svgDemo',
 						name: 'makeSvgDemo',
