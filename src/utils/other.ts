@@ -72,29 +72,6 @@ export function setTagsViewNameI18n(item: any) {
 	return tagsViewName;
 }
 
-/**
- * 图片懒加载
- * @param el dom 目标元素
- * @param arr 列表数据
- * @description data-xxx 属性用于存储页面或应用程序的私有自定义数据
- */
-export const lazyImg = (el: string, arr: EmptyArrayType) => {
-	const io = new IntersectionObserver((res) => {
-		res.forEach((v: any) => {
-			if (v.isIntersecting) {
-				const { img, key } = v.target.dataset;
-				v.target.src = img;
-				v.target.onload = () => {
-					io.unobserve(v.target);
-					arr[key]['loading'] = false;
-				};
-			}
-		});
-	});
-	nextTick(() => {
-		document.querySelectorAll(el).forEach((img) => io.observe(img));
-	});
-};
 
 /**
  * 全局组件大小
@@ -180,7 +157,6 @@ export function handleOpenLink(val: RouteItem) {
  * @method elSvg 导出全局注册 element plus svg 图标
  * @method useTitle 设置浏览器标题国际化
  * @method setTagsViewNameI18n 设置 自定义 tagsView 名称、 自定义 tagsView 名称国际化
- * @method lazyImg 图片懒加载
  * @method globalComponentSize() element plus 全局组件大小
  * @method deepClone 对象深克隆
  * @method isMobile 判断是否是移动端
@@ -196,9 +172,6 @@ const other = {
 	},
 	setTagsViewNameI18n(route: RouteToFrom) {
 		return setTagsViewNameI18n(route);
-	},
-	lazyImg: (el: string, arr: EmptyArrayType) => {
-		lazyImg(el, arr);
 	},
 	globalComponentSize: () => {
 		return globalComponentSize();
