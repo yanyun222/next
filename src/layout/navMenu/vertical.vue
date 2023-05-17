@@ -1,4 +1,5 @@
 <template>
+	<Logo />
 	<el-menu
 		router
 		:default-active="state.defaultActive"
@@ -36,6 +37,7 @@ import { useRoute, onBeforeRouteUpdate, RouteRecordRaw } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useThemeConfig } from '/@/stores/themeConfig';
 import other from '/@/utils/other';
+import Logo from '../logo/index.vue'
 
 // 引入组件
 const SubItem = defineAsyncComponent(() => import('/@/layout/navMenu/subItem.vue'));
